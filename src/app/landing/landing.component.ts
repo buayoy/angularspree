@@ -18,13 +18,12 @@ import { Product } from '../core/models/product';
 })
 export class LandingComponent implements OnInit {
   products$: Observable<any>;
-  products_by_taxons$: Observable<any>; 
+  products_by_taxons$: Observable<any>;
   taxon_by_name: any;
   taxons_id: string;
   favoriteProducts$: any;
   dealsType = environment.config.Deals.type;
   brands$: Observable<any>;
-  
 
 
   // dealsType is taxonomi whose value is set in app-data.ts;
@@ -63,7 +62,7 @@ export class LandingComponent implements OnInit {
     this.meta.updateTag({ name: 'title', content: environment.config.landing_page.title });
     this.meta.updateTag({ name: 'apple-mobile-web-app-title', content: environment.appName });
     this.meta.updateTag({ property: 'og:description', content: environment.config.landing_page.description })
-    this.meta.updateTag({ property: "og:url", content: environment.config.frontEndUrl }),
+    this.meta.updateTag({ property: 'og:url', content: environment.config.frontEndUrl }),
     this.meta.updateTag({ property: 'twitter:title', content: environment.config.landing_page.description })
     this.metaTitle.setTitle(environment.config.landing_page.title);
   }
